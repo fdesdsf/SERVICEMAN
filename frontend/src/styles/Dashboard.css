@@ -1,0 +1,279 @@
+/* src/styles/Dashboard.css - Updated */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Updated Top Navigation Bar */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0056b3; /* A strong accent line */
+}
+
+.navbar-left {
+    text-align: left;
+}
+
+.system-name {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #333;
+}
+
+.system-description {
+    font-size: 0.9em;
+    color: #777;
+    font-weight: 400;
+}
+
+.logo {
+    height: 40px;
+    border-radius: 50%; /* Make the logo circular */
+}
+
+.dashboard-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Updated card styling for better visuals */
+.dashboard-form-container,
+.last-served-section,
+.queue-section { /* Added a new class for queues */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease-in-out; /* Subtle hover effect */
+}
+
+.dashboard-form-container:hover,
+.last-served-section:hover,
+.queue-section:hover {
+    transform: translateY(-5px);
+}
+
+.timer-display {
+    text-align: right;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+}
+
+.dashboard-title {
+    text-align: center;
+    margin-top: 0;
+    color: #004d99; /* Use the main brand color */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Common form group styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Enhanced input, select, and textarea styles */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px; /* Increased padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* More rounded */
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.radio-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Enhanced Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Updated Table styling for better readability */
+.customer-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0; /* Use border-spacing with separate borders */
+    margin-top: 20px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners */
+}
+
+.customer-table th,
+.customer-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.customer-table th {
+    background-color: #e9ecef;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #495057;
+    font-size: 0.9em;
+}
+
+.customer-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Enhanced Acknowledge Button */
+.acknowledge-button {
+    padding: 10px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.acknowledge-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Last served section styles */
+.last-served-section {
+    text-align: left;
+}
+
+.last-served-section h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-top: 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.served-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Updated served list items */
+.served-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #999;
+    font-size: 0.8em;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .navbar-right {
+        margin-top: 10px;
+    }
+
+    .dashboard-form-container,
+    .last-served-section,
+    .queue-section {
+        padding: 20px;
+        max-width: 100%;
+        margin: 0 10px 20px;
+    }
+
+    .dashboard-title {
+        font-size: 1.5em;
+    }
+
+    .customer-table th,
+    .customer-table td {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}

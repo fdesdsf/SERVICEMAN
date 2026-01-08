@@ -1,0 +1,247 @@
+/* src/styles/Configuration.css - Updated */
+
+/* Main container to center the card on the page and hold the footer */
+.config-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef2f5;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+/* The card itself, with professional styling */
+.config-card,
+.config-success-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.config-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for the header section with the logo and title */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.card-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.config-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* General input field styling, now with focus and error styles */
+.company-input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Error message styling */
+.error {
+    color: #dc3545;
+    margin-top: -10px; /* Adjust spacing */
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.modules-list {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Updated checkbox styling for a more custom look */
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+}
+
+.checkbox-group label {
+    font-size: 1.1em;
+    color: #444444;
+    cursor: pointer;
+}
+
+/* Enhanced save button styling */
+.save-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.save-button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Styling for the success message state */
+.config-success-card {
+    text-align: center;
+}
+
+/* Enhanced login link styling */
+.login-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.login-link:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Styling for the link that switches between flows */
+.flow-switch {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+.flow-switch span {
+    color: #007bff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.flow-switch span:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Footer styling */
+.footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    text-align: center;
+    color: #999;
+    font-size: 0.8em;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    margin-top: auto;
+}
+
+.footer-brand {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.footer-sub {
+    font-size: 13px;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+    .config-card,
+    .config-success-card {
+        padding: 30px 20px;
+    }
+}
